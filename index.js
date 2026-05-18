@@ -34,3 +34,18 @@ fsPromises.appendFile(`./employees_data/${emp2.empName}.txt`, '\nEvaluation: 95'
     .catch((err) => {
         console.log('שגיאה בעדכון emp2:', err.message);
     });
+
+
+fsPromises.readdir('./employees_data')
+    .then((files) => {
+        console.log(files); 
+        
+        if (files.length === 3) {
+            console.log('מצוין! יש בדיוק 3 קבצים בתיקייה.');
+        } else {
+            console.log(`אין 3 קבצים בדיוק בתיקיה`);
+        }
+    })
+    .catch((err) => {
+        console.log('שגיאה בקריאת התיקייה:', err.message);
+    });
