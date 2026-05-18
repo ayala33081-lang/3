@@ -1,0 +1,2 @@
+{"empId":2,"empName":"Yossi","empSalary":20000}
+Evaluation: 95
