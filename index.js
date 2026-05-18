@@ -26,3 +26,11 @@ fsPromises.writeFile(`./employees_data/${emp3.empName}.txt`, JSON.stringify(emp3
     .catch((err) => {
         console.log('שגיאה בשמירת emp3:', err.message);
     });
+
+fsPromises.appendFile(`./employees_data/${emp2.empName}.txt`, '\nEvaluation: 95') 
+    .then(() => {
+        console.log('emp2 עודכן בהצלחה  !');
+    })
+    .catch((err) => {
+        console.log('שגיאה בעדכון emp2:', err.message);
+    });
